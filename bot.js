@@ -62,9 +62,7 @@ adv3 = 'http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg';
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
-    var req = request.text.substring(5,request.text.length);
-    var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/LFR/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/lfr/players?name="+request.text.substring(5,8)+"&position=all&team=all");
     this.res.end();
   }  
 
