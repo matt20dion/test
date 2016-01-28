@@ -29,7 +29,7 @@ function respond() {
     postMessage("https://i.imgur.com/B5BSVqH.png");
     this.res.end();
   } 
-  else if(request.text && botRegexSalt.test(request.text)) {
+  else if(request.text && botRegexEncore.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://49.media.tumblr.com/9ebd4348e0522604487acce4c179b3a7/tumblr_nnub5rtY5d1s01qkyo1_500.gif");
     this.res.end();
