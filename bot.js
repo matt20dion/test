@@ -10,7 +10,9 @@ function respond() {
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
-      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
+      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd'; 
++      adv1 = 'http://livemusicblog.wpengine.netdna-cdn.com/wp-content/uploads/2013/01/pitchfork-advance-logo.jpg'; adv2 = 'https://pbs.twimg.com/profile_images/2449296313/AdvanceLogo.jpg'
++      adv3 = 'http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg';
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -36,7 +38,12 @@ function respond() {
   } 
   else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");
+    +    if(0.6 >= Math.random() > 0.3)
++      postMessage(adv1);
++    else if(Math.random() >0.6)
++      postMessage(adv3)
++    else
++      postMessage(adv2);
     this.res.end();
   }
   else if(request.text && botRegexRules.test(request.text)) {
