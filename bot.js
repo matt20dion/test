@@ -103,7 +103,7 @@ adv3 = 'http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg';
   }
   else if(request.text && botRegexTP.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.youtube.com/watch?v=nyr6PaHnwII&list=UUjtkEEILvKO9L5LSIVLUYRg");
+    postMessage("https://www.youtube.com/watch?v=2k58x6DT40M");
     this.res.end();
   }
   else if(request.text && botRegexSiege.test(request.text)) {
